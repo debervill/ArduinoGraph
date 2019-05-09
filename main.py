@@ -5,8 +5,19 @@ import matplotlib.pyplot as plt
 import time
 import pylab
 
+def initialize(port):
+    serPort = serial.Serial(port)
+    return serPort
+
+
+def klibration():
+    pass
+
+
+
 
 def main():
+    Sp = initialize('COM3')
     print("1")
     logging.basicConfig(filename='ard.log',
                         level=logging.DEBUG,
@@ -16,8 +27,7 @@ def main():
 
     splitPattern = '\W*\d{1}.\d{2}'
 
-    serPort = serial.Serial('COM3')
-    res = serPort.readline()
+    res = Sp.readline()
 
 
 
