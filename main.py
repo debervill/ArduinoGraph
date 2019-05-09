@@ -20,6 +20,8 @@ def main():
     res = serPort.readline()
 
 
+
+
     fig = plt.gcf()
     fig.suptitle("Графики перемещения по осям X, Y,Z")
     gs = fig.add_gridspec(2, 2)
@@ -54,7 +56,7 @@ def main():
         fig.canvas.draw()
 
         time.sleep(0.1)
-
+        time.time()
 
 if __name__ == '__main__':
     main()
