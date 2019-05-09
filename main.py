@@ -19,10 +19,6 @@ def main():
     serPort = serial.Serial('COM3')
     res = serPort.readline()
 
-    dataX = []
-    dataY = []
-    dataZ = []
-
 
     fig = plt.gcf()
     fig.suptitle("Графики перемещения по осям X, Y,Z")
